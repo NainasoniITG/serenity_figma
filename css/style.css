@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'nunito-regular';
+}
+
+body {
+    font-family: 'nunito-regular';
+}
+
+.page-width {
+    max-width: 1600px;
+    margin: auto;
+    padding: 0px 130px;
+}
+
+@font-face {
+    font-family: 'american font';
+    src: url('../assets/font/Americana Font Regular/Americana Font Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nunito-regular';
+    src: url('../assets/font/nunito-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.color-scheme-1 {
+    --color-forgrade: #ffffff;
+    --color-forgrade-background: #26A3DB;
+    --button-forgrade-color: #ffffff;
+    --button-background-color: #26A3DB;
+    --button-hover-color: rgb(214, 214, 214);
+}
+
+.color-scheme-2 {
+    --color-forgrade: #000309;
+    --color-forgrade-background: #E9F6FB;
+    --button-forgrade-color: #ffffff;
+    --button-background-color: #26A3DB;
+    --button-hover-color: rgb(214, 214, 214);
+}
+
+.color-scheme-3 {
+    --color-forgrade: #000309;
+    --color-forgrade-background: #ffffff;
+    --button-forgrade-color: #000309;
+    --button-background-color: transparent;
+    --button-hover-color: gray;
+}
+
+a.primary-button {
+    color: var(--color-forgrade);
+    background-color: var(--button-background-color);
+    padding: 13px 36px;
+    border-radius: 5px;
+}
+
+a.underline-button {
+    color: var(--color-forgrade);
+    background: var(--button-background-color);
+    padding: 5px;
+}
+
+/* grid property */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-col-6-dekstop .grid-item {
+    width: calc(16% - 0px);
+    max-width: calc(16% - 0px);
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+a {
+    display: inline-block;
+}
+
+.link-color {
+    color: var(--color-forgrade);
+}
+
+h3 {
+    font-size: 38px;
+    font-family: 'american font';
+    font-weight: 200;
+}
+
+.annoucement-bar-inner {
+    padding: 10px 0px;
+    background-color: var(--color-forgrade-background);
+}
+
+.annoucement-bar-text p {
+    font-family: 'nunito-regular';
+    color: var(--color-forgrade);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center
+}
+
+.header-inner {
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+header.header-section {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+ul.nav-links.flex {
+    gap: 20px;
+}
+
+ul.nav-links.flex li a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+ul.nav-links.flex li a:hover {
+    text-decoration: underline;
+    color: var(--color-forgrade-background);
+}
+
+ul.icons-nav-links.flex {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+
+/* banner section */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/1.54;
+    object-fit: cover;
+}
+
+.banner-content-inner.color-scheme-1.flex.column {
+    position: absolute;
+    bottom: 17%;
+    gap: 30px;
+    color: var(--color-forgrade);
+    max-width: 450px;
+    text-align: start;
+    transform: translateY(-50%);
+}
+
+.banner-title.flex.column {
+    gap: 10px;
+}
+
+.banner-content-inner p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+/* icons with text */
+
+ul.icon-with-text-content.grid.grid-col-6-dekstop {
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-with-text-wrapper.color-scheme-1 {
+   background-color: var(--color-forgrade-background);
+}
+
+.icon-text-content {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.icon-with-text-content{
+    padding: 20px 0px;
+}
+
+.sub-title{
+    font-family: 'american font';
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-forgrade);
+}

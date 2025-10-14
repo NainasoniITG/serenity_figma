@@ -1,0 +1,33 @@
+@media(max-width:1200px) {
+    .header-inner {
+        padding: 10px;
+    }
+
+    .banner-content-inner.color-scheme-1.flex.column {
+        bottom: 0;
+        left : 0;
+        transform: translateY(0)
+    }
+}
+
+@media(max-width: 992px) {
+    .header-navigation {
+        display: none;
+    }
+
+    .header-inner {
+        grid-template-columns: 1fr auto;
+    }
+
+    .header-logo {
+        display: flex;
+        justify-content: center;
+        padding-left: 115px;
+    }
+    .banner-content-inner h3 {
+        font-size: 28px;
+    }
+    .banner-content-inner.color-scheme-1.flex.column {
+        color: black;
+    }
+}
