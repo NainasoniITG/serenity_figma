@@ -37,6 +37,8 @@ body {
     --button-forgrade-color: #ffffff;
     --button-background-color: #26A3DB;
     --button-hover-color: rgb(214, 214, 214);
+    --button-backgrround-secondary: #ffffff;
+    --button-secondary-color: #000000;
 }
 
 .color-scheme-2 {
@@ -49,7 +51,8 @@ body {
 
 .color-scheme-3 {
     --color-forgrade: #000309;
-    --color-forgrade-background: #ffffff;
+    --color-forgrade-background: #E9F6FB;
+    --color-secondary-background: #ffffff;
     --button-forgrade-color: #000309;
     --button-background-color: transparent;
     --button-hover-color: gray;
@@ -65,7 +68,16 @@ a.primary-button {
 a.underline-button {
     color: var(--color-forgrade);
     background: var(--button-background-color);
-    padding: 5px;
+    border-bottom: 1px solid var(--button-forgrade-color);
+    ;
+}
+
+button.secondary-button {
+    padding: 13px 36px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-backgrround-secondary);
+    color: var(--button-secondary-color)
 }
 
 /* grid property */
@@ -77,6 +89,11 @@ a.underline-button {
 .grid-col-6-dekstop .grid-item {
     width: calc(16% - 0px);
     max-width: calc(16% - 0px);
+}
+
+.grid-col-4-dekstop .grid-item {
+    width: calc(25% - 23px);
+    max-width: calc(25% - 23px);
 }
 
 .flex {
@@ -91,14 +108,31 @@ a {
     display: inline-block;
 }
 
+.gradiant {
+    background-color: var(--color-forgrade-background);
+    color: var(--color-forgrade);
+}
+
 .link-color {
     color: var(--color-forgrade);
 }
 
-h3 {
-    font-size: 38px;
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'american font';
     font-weight: 200;
+}
+
+.product-title {
+    font-family: 'american font';
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: var(--color-forgrade);
 }
 
 .annoucement-bar-inner {
@@ -130,6 +164,10 @@ header.header-section {
     width: 100%;
 }
 
+.hamburger {
+    display: none;
+}
+
 ul.nav-links.flex {
     gap: 20px;
 }
@@ -151,7 +189,36 @@ ul.icons-nav-links.flex {
     gap: 20px;
 }
 
+/* hamburger */
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--color-forgrade);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Active state -> Cross */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 
 /* banner section */
 .swiper {
@@ -171,15 +238,15 @@ ul.icons-nav-links.flex {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    max-height: 689px;
     aspect-ratio: 4/1.54;
     object-fit: cover;
+    object-position: center;
 }
-
 
 .banner-content-inner.color-scheme-1.flex.column {
     position: absolute;
-    top: 305px;
+    top: 50%;
     gap: 30px;
     color: var(--color-forgrade);
     max-width: 450px;
@@ -205,25 +272,200 @@ ul.icon-with-text-content.grid.grid-col-6-dekstop {
     gap: 10px;
 }
 
-.icon-with-text-wrapper.color-scheme-1 {
-   background-color: var(--color-forgrade-background);
-}
-
 .icon-text-content {
     width: 100%;
     text-align: center;
     padding: 10px;
 }
 
-.icon-with-text-content{
+.icon-with-text-content {
     padding: 20px 0px;
 }
 
-.sub-title{
+.title {
+    font-size: 38px;
+}
+
+.sub-title {
     font-family: 'american font';
-    font-weight: 200;
+    font-weight: lighter;
     font-size: 18px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: var(--color-forgrade);
 }
+
+
+/* category section */
+
+ul.categories-inner-content.grid.grid-col-4-dekstop {
+    gap: 30px;
+}
+
+li.categories-content.grid-item {
+    position: relative;
+}
+
+.categories-text-content {
+    position: absolute;
+    bottom: 7%;
+}
+
+.categories-content-inner.flex.column {
+    align-items: center;
+}
+
+.categories-wrapper-content.flex.column {
+    gap: 40px;
+    text-align: center;
+}
+
+.categories-wrapper.color-scheme-3 {
+    padding: 80px 0px;
+}
+
+.categories-text-content.flex.column {
+    gap: 10px;
+}
+
+/* footer */
+
+.footer-inner {
+    padding-top: 80px;
+    color: var(--color-forgrade);
+}
+
+ul.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 0.86fr 1fr 1fr;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    color: var(--color-forgrade);
+    padding: 40px 0px;
+}
+
+ul.footer-links.flex.column {
+    gap: 10px;
+}
+
+li.footer-content-inner.flex.column {
+    gap: 20px;
+}
+
+li.footer-content-inner a {
+    font-size: 16px;
+}
+
+.footer-bottom-content.flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.privacy-and-sercives.flex {
+    gap: 10px;
+}
+
+li.text-with-icon.flex {
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icon.flex {
+    gap: 20px;
+}
+
+input[type="email"] {
+    width: 90%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 13px 5px;
+}
+
+input::placeholder {
+    color: var(--color-forgrade);
+}
+
+input:focus-visible,
+select:focus-visible {
+    outline: none;
+    color: var(--color-forgrade);
+}
+
+select#country {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--color-forgrade);
+}
+
+.news-letter.flex.column {
+    gap: 20px;
+}
+
+li.text-with-icon.flex a {
+    font-size: 14px;
+}
+
+.footer-inner {
+    padding-bottom: 50px;
+    border-bottom: 1px solid white;
+}
+
+.bottom-content-inner.flex.column {
+    gap: 20px;
+}
+
+.payment-wrapper.payment-wrapper.flex.column {
+    gap: 10px;
+}
+
+.payment-icon.flex {
+    gap: 10px;
+}
+
+/* slider */
+
+  .slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    flex: 0 0 25%; /* Show 4 slides at a time */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .nav-button:hover {
+    opacity: 1;
+  }
+  #prev {
+    left: 0;
+  }
+  #next {
+    right: 0;
+  }

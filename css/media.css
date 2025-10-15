@@ -1,33 +1,111 @@
-@media(max-width:1220px) {
-   .page-width{
-    padding: 0 20px;
-   }
-
-    .banner-content-inner.color-scheme-1.flex.column {
-        top: 100px;
-        bottom: 0;
-        transform: translateY(0)
+@media(max-width:1400px) {
+    .page-width {
+        padding: 0px 40px;
     }
 }
 
 @media(max-width: 992px) {
+
+    .page-width {
+        padding: 0px 20px;
+    }
+
     .header-navigation {
         display: none;
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    .banner-content-inner.color-scheme-1.flex.column {
+        top: 56%;
+    }
+
+    .grid-col-2-tablet .grid-item {
+        width: calc(50% - 50px);
+        max-width: calc(50% - 50px);
+    }
+
+    ul.categories-inner-content.grid.grid-col-2-tablet {
+        justify-content: center;
+    }
+
+    .grid-col-3-tablet .grid-item {
+        width: calc(33.3% - 20px);
+        max-width: calc(33.3% - 20px);
+    }
+
     .header-inner {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .header-logo {
         display: flex;
         justify-content: center;
-        padding-left: 115px;
     }
+
     .banner-content-inner h3 {
         font-size: 28px;
     }
+
     .banner-content-inner.color-scheme-1.flex.column {
-        color: black;
+        color: var(--color-forgrade);
+    }
+
+    ul.footer-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    a.primary-button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media(max-width: 750px) {
+      
+    .page-width {
+        padding: 0px 15px;
+    }
+
+    .grid-col-2-mobile .grid-item {
+        width: calc(50% - 50px);
+        max-width: calc(50% - 50px);
+    }
+
+    .swiper-slide img {
+        aspect-ratio: 1/1;
+    }
+
+    .footer-bottom-content.flex {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .payment-icon.flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner-content-inner.color-scheme-1.flex.column {
+        top: 62%;
+    }
+
+    .privacy-and-sercives.flex {
+        justify-content: center;
     }
 }
