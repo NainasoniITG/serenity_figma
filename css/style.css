@@ -176,9 +176,10 @@ ul.icons-nav-links.flex {
     object-fit: cover;
 }
 
+
 .banner-content-inner.color-scheme-1.flex.column {
     position: absolute;
-    bottom: 17%;
+    top: 305px;
     gap: 30px;
     color: var(--color-forgrade);
     max-width: 450px;

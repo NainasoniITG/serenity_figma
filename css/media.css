@@ -1,11 +1,11 @@
-@media(max-width:1200px) {
-    .header-inner {
-        padding: 10px;
-    }
+@media(max-width:1220px) {
+   .page-width{
+    padding: 0 20px;
+   }
 
     .banner-content-inner.color-scheme-1.flex.column {
+        top: 100px;
         bottom: 0;
-        left : 0;
         transform: translateY(0)
     }
 }
