@@ -464,8 +464,8 @@ li.featured-collection-content.grid-item img {
 }
 
 .wellness-media-content {
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    left: 51%;
 }
 
 .wellness-media{
@@ -574,6 +574,27 @@ ul.scrolling-image-text-inner.grid.grid-col-2-dekstop {
     width: 100%;
     height: 100%;
 }
+/* image-with-text */
+
+ul.image-with-text-content.grid.grid-col-2-dekstop {
+    gap: 60px;
+    padding: 80px 0px;
+}
+
+.media-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul.image-with-text-content.grid.grid-col-2-dekstop {
+    gap: 60px;
+}
+
+li.image-with-text-content-inner.grid-item.flex.column {
+    gap: 20px;
+    justify-content: center;
+}
 
 /* insta feed */
 
@@ -588,6 +609,7 @@ ul.scrolling-image-text-inner.grid.grid-col-2-dekstop {
 ul.insta-feed-media.grid.grid-col-5-dekstop {
     gap: 20px;
     justify-content: center;
+    align-items: center;
     padding: 0px 20px;
 }
 
