@@ -587,6 +587,7 @@ ul.scrolling-image-text-inner.grid.grid-col-2-dekstop {
 
 ul.insta-feed-media.grid.grid-col-5-dekstop {
     gap: 20px;
+    justify-content: center;
     padding: 0px 20px;
 }
 
