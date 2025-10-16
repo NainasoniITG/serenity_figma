@@ -49,6 +49,19 @@
         font-size: 28px;
     }
 
+    .banner-media img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
+        max-height: 600px;
+        object-position: bottom;
+    }
+
+    .banner-section-title h3 {
+        font-size: 28px;
+        max-width: 400px;
+    }
+
     .banner-content-inner.color-scheme-1.flex.column {
         color: var(--color-forgrade);
     }
@@ -75,7 +88,7 @@
 }
 
 @media(max-width: 750px) {
-      
+
     .page-width {
         padding: 0px 15px;
     }
@@ -87,6 +100,23 @@
 
     .swiper-slide img {
         aspect-ratio: 1/1;
+    }
+
+    .content-item.flex.column {
+        gap: 10px;
+        padding: 10px 0px;
+    }
+
+    ul.text-content-inner.flex.column {
+        gap: 2px;
+    }
+
+    h3 .title {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
     }
 
     .footer-bottom-content.flex {
