@@ -116,6 +116,12 @@
         justify-content: center;
     }
 
+    ul.customer-review-content {
+        display: flex;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+
     .blog-title::before,
     .blog-title::after {
         width: 40px;
@@ -167,6 +173,10 @@
         font-size: 20px;
     }
 
+    .category-media img {
+        aspect-ratio: 4/5;
+    }
+
     p {
         font-size: 12px;
     }
@@ -194,14 +204,8 @@
         gap: 20px;
     }
 
-    ul.customer-review-content {
-        display: flex;
-        gap: 20px;
-        flex-direction: column-reverse;
-    }
-
     .reveiw-content h4 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .payment-icon.flex {
