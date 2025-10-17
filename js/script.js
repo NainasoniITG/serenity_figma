@@ -3,8 +3,6 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
     },
 });
-//  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
 var swiper = new Swiper(".categories-slider", {
     slidesPerView: 1,

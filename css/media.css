@@ -2,6 +2,12 @@
     .page-width {
         padding: 0px 40px;
     }
+
+    .wellness-section-inner {
+        display: grid;
+        grid-template-columns: 32% 41%;
+        gap: 241px;
+    }
 }
 
 @media(max-width: 992px) {
@@ -34,6 +40,20 @@
     .grid-col-3-tablet .grid-item {
         width: calc(33.3% - 20px);
         max-width: calc(33.3% - 20px);
+    }
+
+    .wellness-media {
+        display: none;
+    }
+
+    .wellness-section-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .blog-card::after {
+        display: none;
     }
 
     .header-inner {
@@ -76,10 +96,38 @@
         font-size: 12px;
     }
 
+    .blog-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+    }
+
+    .grid-col-2-dekstop .grid-item {
+        width: calc(100% - 0px);
+        max-width: calc(100% - 0px);
+    }
+
+    ul.image-with-text-content.grid {
+        flex-direction: column-reverse;
+    }
+
     .header-logo {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .blog-title::before,
+    .blog-title::after {
+        width: 40px;
+    }
+
+    .blog-title {
+        font-size: 30px;
+    }
+
+    li.scrolling-image-content.grid-item.flex.column {
+        flex-direction: row;
+        gap: 10px;
     }
 
     .hamburger {
@@ -111,12 +159,32 @@
         gap: 2px;
     }
 
-    h3 .title {
+    .title {
+        font-size: 28px;
+    }
+
+    .riched-text-content h3 {
         font-size: 20px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .blog-card h3 {
+        font-size: 16px;
+    }
+
+    .banner-text.flex.column {
+        gap: 10px;
+    }
+
+    .blog-card p {
+        font-size: 12px;
+    }
+
+    .insta-feed-text h3 {
+        font-size: 20px;
     }
 
     .footer-bottom-content.flex {
@@ -124,6 +192,16 @@
         justify-content: center;
         text-align: center;
         gap: 20px;
+    }
+
+    ul.customer-review-content {
+        display: flex;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .reveiw-content h4 {
+        font-size: 18px;
     }
 
     .payment-icon.flex {
@@ -137,5 +215,18 @@
 
     .privacy-and-sercives.flex {
         justify-content: center;
+    }
+
+    .blog-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-title::before,
+    .blog-title::after {
+        display: none;
+    }
+
+    .blog-title {
+        padding: 0;
     }
 }
