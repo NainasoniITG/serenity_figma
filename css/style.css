@@ -282,14 +282,13 @@ ul.icons-nav-links.flex {
     z-index: 1000;
 }
 
-.popup-content,
-.message-popup {
+.popup-content, .message-popup {
     background: var(--color-forgrade-background);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     position: relative;
-    max-width: 400px;
+    max-width: 325px;
     width: 90%;
 }
 
