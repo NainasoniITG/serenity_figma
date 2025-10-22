@@ -148,12 +148,17 @@
     }
 
     .grid-col-2-mobile .grid-item {
-        width: calc(50% - 50px);
-        max-width: calc(50% - 50px);
+        width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
 
     .swiper-slide img {
         aspect-ratio: 1/1;
+    }
+
+    .popup-content,
+    .message-popup {
+        max-width: 65%;
     }
 
     .content-item.flex.column {
@@ -179,9 +184,9 @@
 
     p {
         font-size: 12px;
-    }i
+    }
 
-    .blog-card h3 {
+    i .blog-card h3 {
         font-size: 16px;
     }
 

@@ -32,11 +32,11 @@ var swiper = new Swiper(".categories-slider", {
 });
 
 var swiper = new Swiper(".featured-collection-slider", {
-    slidesPerView: 1, // default mobile
+    slidesPerView: 1,
     spaceBetween: 10,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+     navigation: {
+        nextEl: ".swiper-button-right",
+        prevEl: ".swiper-button-left",
     },
     breakpoints: {
         500: {
@@ -57,17 +57,26 @@ var swiper = new Swiper(".featured-collection-slider", {
         },
     },
 });
-
 //website pop-up
-function popShow() {
-    document.getElementById('agePopup').style.visibility = 'hidden';
+
+function popUpShow() {
+    document.getElementById('agePopup').style.display = 'none';
 
     setTimeout(() => {
-        document.getElementById('agePopup').style.visibility = 'visible';
-        document.body.style.overflow = 'hidden';
-    },1);
+        document.getElementById('agePopup').style.display = 'flex';
+
+        const storedAge = parseInt(localStorage.getItem("UserAge"));
+        if (isNaN(storedAge) || storedAge < 18 || storedAge >= 100) {
+            document.body.style.overflow = 'hidden';
+
+        } else {
+            document.body.style.overflow = 'auto';
+            document.getElementById('agePopup').style.display = 'none';
+        }
+    }, 1);
 }
-popShow();
+popUpShow();
+
 
 function checkAge() {
     const age = parseInt(document.getElementById('ageInput').value);
@@ -78,11 +87,14 @@ function checkAge() {
     document.getElementById('agePopup').style.display = 'none';
 
     if (age >= 18 && age < 100) {
+        localStorage.setItem("UserAge", age);
         document.getElementById('welcomePopup').style.display = 'flex';
-        const value = localStorage.getItem("UserAge");
-        const value2 = JSON.parse(value);
     } else {
         document.getElementById('notEligiblePopup').style.display = 'flex';
+        setTimeout(() => {
+            document.getElementById('notEligiblePopup').style.display = 'none';
+            document.getElementById('agePopup').style.display = 'flex';
+        }, 2000);
     }
 }
 

@@ -277,6 +277,7 @@ ul.icons-nav-links.flex {
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     align-items: center;
+    display: flex;
     justify-content: center;
     z-index: 1000;
 }
@@ -381,7 +382,7 @@ ul.icons-nav-links.flex {
 
 ul.icon-with-text-content.grid.grid-col-6-dekstop {
     justify-content: center;
-    gap: 10px;
+    gap: 9px;
 }
 
 .media-content.flex.column {
@@ -390,9 +391,8 @@ ul.icon-with-text-content.grid.grid-col-6-dekstop {
 
 .icon-text-content {
     text-align: center;
-    padding: 10px;
+    padding: 10px 0px;
 }
-
 .icon-with-text-content {
     padding: 20px 0px;
     justify-content: space-between;
@@ -520,6 +520,10 @@ h6.compare-price {
 .featured-collection-item.flex.column:hover .media-content {
     opacity: 2;
     visibility: visible;
+}
+
+.product-item {
+    padding: 0px 10px;
 }
 
 .media-content-inner.flex {
