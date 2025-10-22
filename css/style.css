@@ -303,6 +303,16 @@ ul.icons-nav-links.flex {
     border-radius: 5px;
 }
 
+input#ageInput {
+    color: var(--color-secondary);
+}
+
+.pop-up-content p {
+    letter-spacing: 0.3px;
+    font-family: cursive;
+    color: #547785e6;
+}
+
 .popup-content button {
     padding: 13px 36px;
     cursor: pointer;
@@ -311,6 +321,10 @@ ul.icons-nav-links.flex {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+}
+
+.user-age-verification h2{
+    color: #118d11a1;
 }
 
 .popup-content.flex.column {
@@ -887,6 +901,10 @@ input[type="email"] {
     border: 1px solid white;
     border-radius: 5px;
     padding: 13px 10px;
+}
+
+input[type="number"]::placeholder {
+    color: #26a2db91;
 }
 
 input::placeholder {

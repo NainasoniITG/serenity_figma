@@ -94,7 +94,7 @@ function checkAge() {
         setTimeout(() => {
             document.getElementById('notEligiblePopup').style.display = 'none';
             document.getElementById('agePopup').style.display = 'flex';
-        }, 2000);
+        }, 4000);
     }
 }
 
