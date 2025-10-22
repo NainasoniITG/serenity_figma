@@ -49,6 +49,7 @@ body {
     --color-tertiary: #8A9099;
     --color-forgrade-background: #E9F6FB;
     --button-forgrade-color: #ffffff;
+    --button-secondary-color: #999;
     --button-background-color: #26A3DB;
     --button-hover-color: #8bd6f8;
 }
@@ -262,6 +263,75 @@ ul.icons-nav-links.flex {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* website pop up */
+
+.popup,
+.welcome-popup,
+.not-eligible-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content,
+.message-popup {
+    background: var(--color-forgrade-background);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+}
+
+.message-popup h2 {
+    color: var(--color-secondary);
+}
+
+.popup-content input {
+    padding: 10px;
+    width: 97%;
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+}
+
+.popup-content button {
+    padding: 13px 36px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-forgrade-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.popup-content.flex.column {
+    gap: 15px;
+}
+
+.user-age-verification.flex.column {
+    gap: 10px;
+}
+
+.message-popup.flex.column {
+    gap: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--button-secondary-color);
 }
 
 /* banner section */
@@ -687,9 +757,10 @@ li.image-with-text-content-inner.grid-item.flex.column {
     font-size: 20px;
 }
 
-img{
+img {
     cursor: pointer;
 }
+
 ul.customer-review-content {
     padding: 80px 0px;
     display: grid;

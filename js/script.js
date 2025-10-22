@@ -58,3 +58,35 @@ var swiper = new Swiper(".featured-collection-slider", {
     },
 });
 
+//website pop-up
+function popShow() {
+    document.getElementById('agePopup').style.visibility = 'hidden';
+
+    setTimeout(() => {
+        document.getElementById('agePopup').style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
+    },1);
+}
+popShow();
+
+function checkAge() {
+    const age = parseInt(document.getElementById('ageInput').value);
+    if (isNaN(age)) {
+        alert("Please enter a valid age.");
+        return;
+    }
+    document.getElementById('agePopup').style.display = 'none';
+
+    if (age >= 18 && age < 100) {
+        document.getElementById('welcomePopup').style.display = 'flex';
+        const value = localStorage.getItem("UserAge");
+        const value2 = JSON.parse(value);
+    } else {
+        document.getElementById('notEligiblePopup').style.display = 'flex';
+    }
+}
+
+function closeWelcomePopup() {
+    document.getElementById('welcomePopup').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}

@@ -22,7 +22,6 @@
                     <p>Free Shipping On Orders Over $50</p>
                 </div>
             </div>
-
         </div>
         <header class="header-section">
             <div class="header-wrapper">
@@ -131,6 +130,37 @@
                 </div>
             </div>
         </header>
+        <div class="website-popup-wrapper color-scheme-2">
+            <div class="website-popup-inner">
+                <div class="popup flex" id="agePopup">
+                    <div class="popup-content flex column">
+                        <div class="popup-media">
+                            <img src="assets\image\web-logo.png" alt="Logo">
+                        </div>
+                        <div class="user-age-verification flex column">
+                            <h2>Enter Your Age</h2>
+                            <input type="number" id="ageInput" placeholder="Enter your age">
+                        </div>
+                        <div class="check-age-button">
+                            <button onclick="checkAge()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-popup flex" id="welcomePopup" style="display:none;">
+                    <div class="message-popup flex column">
+                        <span class="close-btn" onclick="closeWelcomePopup()">×</span>
+                        <h2>Welcome!</h2>
+                        <p>You are eligible to access the website.</p>
+                    </div>
+                </div>
+                <div class="not-eligible-popup flex" id="notEligiblePopup" style="display:none;">
+                    <div class="message-popup flex column">
+                        <h2>No!</h2>
+                        <p>You are not eligible to access this site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="main-section">
             <div class="banner-wrapper">
                 <div class="banner-inner">
