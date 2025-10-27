@@ -34,7 +34,7 @@ var swiper = new Swiper(".categories-slider", {
 var swiper = new Swiper(".featured-collection-slider", {
     slidesPerView: 1,
     spaceBetween: 10,
-     navigation: {
+    navigation: {
         nextEl: ".swiper-button-right",
         prevEl: ".swiper-button-left",
     },
@@ -57,6 +57,23 @@ var swiper = new Swiper(".featured-collection-slider", {
         },
     },
 });
+
+var swiper = new Swiper(".customer-review-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".review-swiper-button-next",
+        prevEl: ".review-swiper-button-prev",
+    },
+    breakpoints: {
+        1400: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    },
+});
+
+
 //website pop-up
 
 function popUpShow() {

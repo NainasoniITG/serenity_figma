@@ -796,7 +796,8 @@ ul.customer-review-content {
 
 li.customer-review-text-content.grid-item.flex.column {
     gap: 20px;
-    justify-content: center;
+    max-height: 290px;
+    padding-top: 120px;
 }
 
 .arrow-inner.flex {
@@ -815,6 +816,17 @@ span.date {
 li.customer-review-media.grid-item img {
     width: 100%;
     height: 100%;
+}
+
+.customer-review-slide-inner {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 20px;
+}
+
+.swiper-slide.customer-review-slide {
+    display: flex;
 }
 
 /* insta feed */
